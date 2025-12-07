@@ -1,0 +1,19 @@
+<section id="education" class="py-20 px-4">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-2 text-purple-300">Education</h2>
+    <div class="w-20 h-1 bg-purple-400 mx-auto mb-12 rounded"></div>
+
+    @for(edu of education(); track $index) {
+      <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl max-w-2xl mx-auto text-center mb-6">
+        <div class="mx-auto mb-4 w-16 h-16 flex items-center justify-center bg-purple-900 rounded-full ring-4 ring-slate-800">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-300" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L9 9.61l-7.447 3.386a1 1 0 000 1.84l7.5 3.409a1 1 0 00.788 0l7.5-3.409a1 1 0 000-1.84L11 9.61l7.447-3.386a1 1 0 000-1.84l-7-3zM10 8.79L3.622 5.91l6.378-2.734L16.378 5.91L10 8.79zM11 11.21l6.378 2.899L11 16.843l-6.378-2.734L11 11.21z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-white">{{ edu.degree }}</h3>
+        <p class="text-md text-purple-300 mb-2">{{ edu.institution }}</p>
+        <time class="block text-sm font-normal leading-none text-gray-400">{{ edu.period }}</time>
+      </div>
+    }
+  </div>
+</section>
