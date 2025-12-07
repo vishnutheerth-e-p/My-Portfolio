@@ -1,0 +1,24 @@
+<section id="experience" class="py-20 px-4">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-2 text-purple-300">Work Experience</h2>
+    <div class="w-20 h-1 bg-purple-400 mx-auto mb-12 rounded"></div>
+    
+    <div class="relative border-l-2 border-purple-400/30 ml-6">
+      @for (item of experience(); track $index; let isLast = $last) {
+        <div class="mb-10 ml-10">
+          <span class="absolute flex items-center justify-center w-8 h-8 bg-purple-900 rounded-full -left-4 ring-4 ring-slate-800">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-300" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm2 4a1 1 0 100 2h4a1 1 0 100-2H8zm0 3a1 1 0 100 2h4a1 1 0 100-2H8zm0 3a1 1 0 100 2h2a1 1 0 100-2H8z" clip-rule="evenodd" />
+            </svg>
+          </span>
+          <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <h3 class="text-xl font-semibold text-white">{{ item.role }}</h3>
+            <p class="text-md text-purple-300 mb-2">{{ item.company }}</p>
+            <time class="block mb-3 text-sm font-normal leading-none text-gray-400">{{ item.period }}</time>
+            <p class="text-base font-normal text-gray-300">{{ item.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
