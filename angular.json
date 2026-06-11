@@ -12,10 +12,11 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputPath": {
-              "base": "./dist",
-              "browser": "."
-            },
+            "outputPath": "dist",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
             "browser": "index.tsx",
             "tsConfig": "tsconfig.json"
           },
